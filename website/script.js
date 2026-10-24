@@ -2,7 +2,7 @@
    Raj Engineering Industries – site script
    To add a product: add one entry to PRODUCTS below and put
    the image in /images. cat must be one of:
-   toplink | levelling | stabilizer | lowerlink
+   toplink | levelling | stabilizer | lowerlink | bracket
    ========================================================= */
 
 const PHONE = '919855034544';
@@ -14,7 +14,7 @@ const PRODUCTS = [
   { cat: 'lowerlink', name: 'Lower Links Range', fit: 'Swaraj · Mahindra DI · Sonalika · John Deere', img: 'lowerlink-range.jpg', w: 1080, h: 725, tags: ['2, 3 & 5-hole', 'Heavy duty'] },
 
   { cat: 'toplink', name: 'Starnut Top Link', fit: 'John Deere', img: 'toplink-starnut-john-deere.jpg', w: 1200, h: 894, tags: ['Heavy duty', 'Easy adjustment', 'Corrosion resistant'] },
-  { cat: 'stabilizer', name: 'Stabilizer – Old & New Models', fit: 'Swaraj', img: 'stabilizer-swaraj.jpg', w: 1200, h: 773, tags: ['Improved locking', 'Corrosion resistant'] },
+  { cat: 'stabilizer', name: 'Stabilizer – Old & New Models', fit: 'Swaraj', img: 'stabilizer-swaraj.jpg', w: 1200, h: 774, tags: ['Improved locking', 'Corrosion resistant'] },
   { cat: 'levelling', name: 'Levelling Assembly – End & Y-Type', fit: 'Powertrac', img: 'levelling-powertrac.jpg', w: 1200, h: 800, tags: ['Rust resistant', '100% tested'] },
   { cat: 'lowerlink', name: 'Lower Link DI', fit: 'Mahindra DI', img: 'lowerlink-mahindra-di.jpg', w: 1200, h: 891, tags: ['Red coated', 'Bulk supply'] },
 
@@ -39,6 +39,9 @@ const PRODUCTS = [
   { cat: 'stabilizer', name: 'Stabilizer – Silver & Black Model', fit: 'New Holland', img: 'stabilizer-new-holland.jpg', w: 640, h: 755, tags: ['Galvanized', 'Powder coated'] },
 
   { cat: 'toplink', name: 'Mini Tractor Top Links', fit: 'Mini tractors · Multiple sizes', img: 'toplink-mini-tractor-sizes.jpg', w: 515, h: 1200, tags: ['Multiple lengths', 'Black finish'] },
+  { cat: 'bracket', name: 'Lowerlink Bracket 855', fit: 'Swaraj 855', img: 'bracket-swaraj-855.jpg', w: 799, h: 1200, tags: ['Heavy-duty mild steel', 'Corrosion resistant'] },
+  { cat: 'bracket', name: 'Tractor Bracket', fit: 'Swaraj', img: 'bracket-swaraj.jpg', w: 525, h: 1200, tags: ['Premium grade steel', 'Rust resistant'] },
+  { cat: 'bracket', name: 'Tractor Bracket – Blue Finish', fit: 'Heavy duty', img: 'bracket-blue.jpg', w: 1080, h: 936, tags: ['Welded construction', 'Powder coated'] },
 ];
 
 const waLink = (text) => `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
@@ -101,12 +104,6 @@ function applyFilter(filter) {
 // Category tiles & footer links that jump to a filtered catalogue
 document.querySelectorAll('a[data-filter]').forEach((link) => {
   link.addEventListener('click', () => applyFilter(link.dataset.filter));
-});
-
-// Links that pre-select a product in the enquiry form
-const productSelect = document.getElementById('productSelect');
-document.querySelectorAll('a[data-product]').forEach((link) => {
-  link.addEventListener('click', () => { productSelect.value = link.dataset.product; });
 });
 
 /* ---------- Lightbox ---------- */
