@@ -8,25 +8,37 @@
 const PHONE = '919855034544';
 
 const PRODUCTS = [
-  { cat: 'toplink', name: 'Starnut Top Link', fit: 'John Deere', img: 'toplink-starnut-john-deere.jpg', w: 1200, h: 894, tags: ['Heavy duty', 'Easy adjustment', 'Corrosion resistant'] },
+  { cat: 'toplink', name: 'Top Link NST – Extra Long Bush', fit: 'Universal fit', img: 'toplink-nst-long-bush.jpg', w: 800, h: 1200, tags: ['Extra long bush', 'Heavy duty', 'Corrosion resistant'] },
   { cat: 'stabilizer', name: 'Stabilizer Jondear – New Model', fit: 'John Deere', img: 'stabilizer-john-deere.jpg', w: 800, h: 1200, tags: ['SJ-Galv', 'SJ-Green', 'Weather proof'] },
   { cat: 'levelling', name: 'Levelling Assembly', fit: 'Swaraj', img: 'levelling-swaraj.jpg', w: 1200, h: 675, tags: ['Heavy duty', 'Precision fit'] },
   { cat: 'lowerlink', name: 'Lower Links Range', fit: 'Swaraj · Mahindra DI · Sonalika · John Deere', img: 'lowerlink-range.jpg', w: 1080, h: 725, tags: ['2, 3 & 5-hole', 'Heavy duty'] },
 
-  { cat: 'toplink', name: 'Top Link NST (Heavy) – Star Nut with Handle', fit: 'Universal fit', img: 'toplink-nst-star-nut.jpg', w: 675, h: 1200, tags: ['Heavy duty', 'Precision engineered'] },
+  { cat: 'toplink', name: 'Starnut Top Link', fit: 'John Deere', img: 'toplink-starnut-john-deere.jpg', w: 1200, h: 894, tags: ['Heavy duty', 'Easy adjustment', 'Corrosion resistant'] },
   { cat: 'stabilizer', name: 'Stabilizer – Old & New Models', fit: 'Swaraj', img: 'stabilizer-swaraj.jpg', w: 1200, h: 773, tags: ['Improved locking', 'Corrosion resistant'] },
   { cat: 'levelling', name: 'Levelling Assembly – End & Y-Type', fit: 'Powertrac', img: 'levelling-powertrac.jpg', w: 1200, h: 800, tags: ['Rust resistant', '100% tested'] },
   { cat: 'lowerlink', name: 'Lower Link DI', fit: 'Mahindra DI', img: 'lowerlink-mahindra-di.jpg', w: 1200, h: 891, tags: ['Red coated', 'Bulk supply'] },
+
+  { cat: 'toplink', name: 'Top Link FT60 – Star Nut Type', fit: 'Farmtrac FT60 · New model', img: 'toplink-farmtrac-ft60.jpg', w: 525, h: 1200, tags: ['Star nut type', 'Enhanced load capacity'] },
+  { cat: 'stabilizer', name: 'New Model Stabilizer', fit: 'Massey Ferguson', img: 'stabilizer-massey.jpg', w: 635, h: 1200, tags: ['Heavy duty', 'Adjustable'] },
+  { cat: 'levelling', name: 'Levelling Assembly – Orchard', fit: 'Swaraj Orchard', img: 'levelling-swaraj-orchard.jpg', w: 525, h: 1200, tags: ['Adjustable leveling', 'Corrosion resistant'] },
+  { cat: 'toplink', name: 'Top Link NST (Heavy) – Star Nut with Handle', fit: 'Universal fit', img: 'toplink-nst-star-nut.jpg', w: 675, h: 1200, tags: ['Heavy duty', 'Precision engineered'] },
 
   { cat: 'toplink', name: 'Top Link', fit: 'Sonalika', img: 'toplink-sonalika.jpg', w: 678, h: 1200, tags: ['Handle adjust', 'Powder coated'] },
   { cat: 'stabilizer', name: 'Heavy-Duty Stabilizer', fit: 'Sonalika', img: 'stabilizer-sonalika.jpg', w: 631, h: 890, tags: ['Powder coated', 'Adjustable length'] },
   { cat: 'levelling', name: 'Levelling Assembly NST', fit: 'Universal fit', img: 'levelling-nst.jpg', w: 525, h: 1200, tags: ['Easy adjustment', 'Heavy duty'] },
   { cat: 'stabilizer', name: 'Stabilizer – Reduce & Bush Type', fit: 'Mahindra Yuvo', img: 'stabilizer-mahindra-yuvo.jpg', w: 631, h: 418, tags: ['Reduce type', 'Bush type'] },
 
+  { cat: 'toplink', name: 'Top Link – Grey Finish', fit: 'Sonalika', img: 'toplink-sonalika-grey.jpg', w: 525, h: 1200, tags: ['Adjustable length', 'Heavy-duty steel'] },
+  { cat: 'stabilizer', name: 'Stabilizer – Multi-Hole', fit: 'Heavy duty', img: 'stabilizer-black-multihole.jpg', w: 905, h: 1200, tags: ['Multi-hole adjust', 'Black powder coat'] },
+  { cat: 'levelling', name: 'Levelling Assembly – Heavy Duty', fit: 'Heavy duty', img: 'levelling-heavy-duty.jpg', w: 652, h: 1200, tags: ['Brass-finish top', 'Handle adjust'] },
+  { cat: 'stabilizer', name: 'Stabilizer – Blue & Brass', fit: 'Heavy duty', img: 'stabilizer-blue-brass.jpg', w: 600, h: 1200, tags: ['Pin lock', 'Rust resistant'] },
+
   { cat: 'toplink', name: 'Mini Top Link', fit: 'Yuvraj mini tractors', img: 'toplink-mini-yuvraj.jpg', w: 1200, h: 1200, tags: ['Reliable', 'Premium quality'] },
   { cat: 'levelling', name: 'Levelling Assembly – Mini Tractor', fit: 'Yuvraj', img: 'levelling-mini-yuvraj.jpg', w: 680, h: 1104, tags: ['High-strength steel', 'Anti-rust'] },
   { cat: 'stabilizer', name: 'Stabilizer NST', fit: 'All tractor models', img: 'stabilizer-nst.jpg', w: 800, h: 1200, tags: ['High-strength steel', 'Long lasting'] },
   { cat: 'stabilizer', name: 'Stabilizer – Silver & Black Model', fit: 'New Holland', img: 'stabilizer-new-holland.jpg', w: 640, h: 755, tags: ['Galvanized', 'Powder coated'] },
+
+  { cat: 'toplink', name: 'Mini Tractor Top Links', fit: 'Mini tractors · Multiple sizes', img: 'toplink-mini-tractor-sizes.jpg', w: 515, h: 1200, tags: ['Multiple lengths', 'Black finish'] },
 ];
 
 const waLink = (text) => `https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
